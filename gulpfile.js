@@ -1,6 +1,6 @@
 "use strict";
 
-const nameFolderTheme = "metallex-child";
+const nameFolderTheme = "electro-child";
 const gulp = require("gulp");
 const destFolder = "src/wp-content/themes/" + nameFolderTheme + "/assets/main";
 
