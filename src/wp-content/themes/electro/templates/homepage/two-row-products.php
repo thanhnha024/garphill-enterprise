@@ -54,5 +54,5 @@ $show_nav = ! empty( $categories ) && ! is_wp_error( $categories );
         
         echo electro_do_shortcode( 'products',  $shortcode_atts ); ?>
     </div>
-
+    
 </section>
