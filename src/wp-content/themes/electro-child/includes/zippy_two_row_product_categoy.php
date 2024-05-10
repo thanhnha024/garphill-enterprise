@@ -47,7 +47,14 @@ function custom_vc_element() {
                 "param_name" => "sort",
                 "value" => $sort_options,
                 "description" => __("Sort By", "text-domain")
-            ),                
+            ), 
+            array(
+                "type" => "textfield",
+                "heading" => __("Number of products displayed", "text-domain"),
+                "param_name" => "count",
+                "value" => "",
+                "description" => __("Input number of products displayed", "text-domain")
+            ),               
         )
     ) );
 
@@ -61,20 +68,22 @@ function custom_vc_element_output( $atts ) {
         'title' => '',
         'product_category' => '',
         'sort' => 'newest',
+        'count' => '6',
     ), $atts );
 
     $title = $atts['title'];
     $product_category = $atts['product_category'];
     $sort = $atts['sort'];
+    $count = $atts['count'];
     //check exist category
     $category = get_term_by('id', $product_category, 'product_cat');
     if (!$category) {
-        return 'Danh mục sản phẩm không tồn tại.';
+        return 'Category not exist';
     }
 
     $args = array(
         'post_type' => 'product',
-        'posts_per_page' => -1,
+        'posts_per_page' => $count,
         'tax_query' => array(
             array(
                 'taxonomy' => 'product_cat',
@@ -121,7 +130,7 @@ function custom_vc_element_output( $atts ) {
             $categories = get_the_terms( get_the_ID(), 'product_cat' );
             $category_name = '';
             if ( $categories && ! is_wp_error( $categories ) ) {
-                $category_name = $categories[0]->name; // Chỉ lấy tên của chuyên mục đầu tiên
+                $category_name = $categories[0]->name;
             }
             //create button add to cart
             $add_to_cart_url = $product->add_to_cart_url();
@@ -139,7 +148,7 @@ function custom_vc_element_output( $atts ) {
         }
         $output .= '</ul>';
     } else {
-        $output .= 'Không có sản phẩm nào thuộc danh mục này.';
+        $output .= 'Products not found';
     }
     
 
