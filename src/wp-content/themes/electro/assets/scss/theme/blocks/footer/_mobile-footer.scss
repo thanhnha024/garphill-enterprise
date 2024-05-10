@@ -1,0 +1,161 @@
+.handheld-footer {
+    background-color: #f2f2f2;
+
+    .handheld-widget-menu {
+        margin-bottom: 30px;
+
+        .columns {
+            background: $white;
+            margin-bottom: 10px;
+            border-radius: 7px;
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 20px;
+            margin-bottom: 0;
+            position: relative;
+            cursor: pointer;
+
+            &:after {
+                position: absolute;
+                content: '\79';
+                font-family: font-electro;
+                color: $body-color;
+                right: 20px;
+            }
+        }
+
+        ul {
+            @include list-unstyled();
+            padding: 0 20px 20px;
+            margin-bottom: 0;
+
+            ul {
+                padding: 0 10px;
+            }
+
+            li {
+                margin-top: 7px;
+            }
+
+            a {
+                color: #0062bd;
+            }
+        }
+    }
+
+    .footer-social-icons{
+        margin-bottom: 0;
+        font-size: 26px;
+
+        .social-icons-color {
+            li {
+                margin-bottom: 20px;
+                width: auto;
+                padding: 0;
+
+                a {
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+
+    .handheld-footer-bar {
+        background-color: $body-color;
+
+        .handheld-footer-bar-inner {
+            @include make-container();
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: auto;
+            align-self: center;
+        }
+
+        svg path {
+            fill: $white;
+        }
+
+        .footer-call-us {
+            margin-bottom: 0;
+            max-width: 180px;
+            width: auto;
+            text-align: center;
+
+            .call-us-text {
+                font-size: 13px;
+                color: $white;
+                font-weight: 400;
+            }
+
+            .call-us-number,
+            .call-us-number a {
+                font-size: 20px;
+                color: $white;
+            }
+        }
+    }
+
+    &.v2 {
+        .handheld-widget-menu {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 0 53px;
+            padding: 0;
+
+            .columns {
+                width: 50%;
+                padding: 0 15px;
+                background: none;
+            }
+
+            .widget-title {
+                font-size: 14px;
+                padding: 12px 0 6px;
+
+                &:after {
+                    content: '';
+                }
+            }
+
+            .menu {
+                padding: 0;
+
+                li {
+                    margin-top: 7px;
+                }
+
+                a {
+                    color: #0062bd;
+                }
+            }
+        }
+    }
+
+    &.light {
+        .handheld-footer-bar {
+            background-color: $white;
+
+            svg path {
+                fill: $body-color;
+            }
+        }
+
+        .handheld-footer-bar .footer-call-us {
+            .call-us-number,
+            .call-us-text,
+            .call-us-number a {
+                color: $black;
+            }
+        }
+    }
+}

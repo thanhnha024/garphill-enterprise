@@ -1,0 +1,35 @@
+/*===================================================================================*/
+/*  YITH Compare
+/*===================================================================================*/
+
+.add-to-compare-link {
+	padding: 0;
+	border-radius: 0;
+	font-weight: normal;
+
+	&::before {
+		font: normal normal normal 14px/1 font-electro;
+		margin-right: 6px;
+		content: "\64";
+		vertical-align: middle;
+		display: inline-block;
+		font-size: 16px;
+	}
+
+	&.added {
+		&::before {
+			content: fa-content($fa-var-check);
+			@include fa-icon();
+			@include fa-fas;
+			margin-right: 5px;
+		}
+	}
+}
+
+.btn-add-to-compare{
+	i{
+		margin: dir-values(0 5px 0 0);
+		color:darken(#f9f9f9,20%);
+		@include transition(0.3s,ease);
+	}
+}

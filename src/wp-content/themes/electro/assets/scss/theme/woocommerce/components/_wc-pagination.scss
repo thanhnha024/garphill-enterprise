@@ -1,0 +1,47 @@
+.woocommerce-pagination,
+.pagination {
+	ul.page-numbers {
+		margin-bottom: 0;
+		@include list-unstyled();
+		display: flex;
+
+		> li {
+			margin-right: 0.286em;
+
+			a, span {
+				color: lighten($body-color, 20%);
+				border: 1px solid lighten($border-color, 4%);
+			    width: 35px;
+			    height: 35px;
+			    line-height: 34px;
+			    text-align: center;
+			    vertical-align: middle;
+			    border-radius: 20px;
+				display: inline-block;
+
+				&.current {
+					font-weight: bold;
+					border: none;
+					color: $body-color;
+				}
+
+				&.dots {
+					border: none;
+					padding: 0.642em;
+				}
+			}
+
+			.prev,.next {
+				display: none;
+			}
+
+			a:hover {
+				background-color: lighten($border-color, 4%);
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

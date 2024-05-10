@@ -1,0 +1,86 @@
+.products-category-with-image-inner  {
+    .image-block {
+        a {
+            display: block;
+
+            @include media-breakpoint-up(md) {
+                max-width: 200px;
+            }
+        }
+    }
+
+    .products-block {
+        @include media-breakpoint-up(lg) {
+            ul.products.columns-6>li.product {
+                @include make-col(3);
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            ul.products.columns-6>li.product {
+                @include make-col(2);
+            }
+
+            .owl-item>.product .product-inner, .products>.product .product-inner {
+                padding: 1.429em 1.014em 1em 1.014em;
+            }
+
+            .owl-item>.product .price, .products>.product .price {
+                font-size: 1.2em;
+            }
+        }
+
+        @include media-breakpoint-only(xl) {
+            .products.row-cols-xl-4 > li.product  {
+                @include make-col(4);
+
+                &:nth-child(3n) {
+                    @include remove-after-border();
+                }
+            }
+        }
+
+        @media (min-width: 1800px) {
+            .owl-item>.product .product-inner, .products>.product .product-inner {
+                padding: 1.429em 1.714em 1em 1.714em;
+            }
+
+            .owl-item>.product .price, .products>.product .price {
+                font-size: 1.429em;
+            }
+        }
+    }
+}
+
+.products-category-with-image.version-2 {
+    header {
+        margin-bottom: 0;
+    }
+
+    .image-block a {
+        max-width: 213px;
+        margin: 0 auto;
+
+        @include media-breakpoint-up(sm) {
+            margin: 0;
+        }
+    }
+}
+
+.products-category-with-image {
+    ul.products>li.product {
+        @include media-breakpoint-only(lg) {
+            @include make-col(4);
+
+            &:nth-child(3n) {
+                @include remove-after-border();
+            }
+        }
+
+        @include media-breakpoint-between(md, xl) {
+            &:nth-child(1n+4) {
+                display: none;
+            }
+        }
+    }
+}

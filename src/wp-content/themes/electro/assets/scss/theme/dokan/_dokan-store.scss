@@ -1,0 +1,126 @@
+.dokan-store .content-area,
+.dokan-store-sidebar {
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+body.dokan-store .content-area {
+	@include media-breakpoint-down(md) {
+		order: 0;
+	}
+}
+
+.dokan-store-products-filter-area {
+	@media (max-width: 767px) {
+		.search-store-products {
+			margin: 10px 0;
+			width: 100%;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.search-store-products {
+			margin-left: 10px;
+		}
+
+		.product-name-search {
+			width: 250px !important;
+		}
+
+		.orderby-search {
+			width: auto;
+		}
+	}
+}
+
+
+@include media-breakpoint-up(lg) {
+	body.dokan-store .content-area {
+		flex: 0 0 75%;
+		max-width: 75%;
+	}
+
+	.dokan-store-sidebar {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	body.dokan-store .content-area {
+		flex: 0 0 78.5%;
+		max-width: 78.5%;
+	}
+
+	.dokan-store-sidebar {
+		flex: 0 0 21.5%;
+		max-width: 21.5%;
+	}
+}
+
+.dokan-elector-style-active {
+	.dokan-store-sidebar {
+	    margin-right: 0;
+	}
+
+	&:not( .store-v3 ):not( .store-v4 ) .woocommerce-breadcrumb {
+		display: none;
+	}
+
+	&.store-v1 {
+		.store-coupon-wrap {
+			margin-top: 10px;
+		}
+
+		.site-main {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -0.9375rem;
+			margin-right: -0.9375rem;
+		}
+
+		.content-area {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		.dokan-single-store,
+		.dokan-store-top-jumbotron {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding-left: 0.9375rem;
+			padding-right: 0.9375rem;
+		}
+
+		@include media-breakpoint-up(lg) {
+			&.left-sidebar .dokan-single-store,
+			&.right-sidebar .dokan-single-store {
+				flex: 0 0 75%;
+				max-width: 75%;
+			}
+
+			&.left-sidebar .dokan-single-store {
+				order: 2;
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			&.left-sidebar .dokan-single-store,
+			&.right-sidebar .dokan-single-store {
+				flex: 0 0 78.5%;
+				max-width: 78.5%;
+			}
+		}
+	}
+
+	&.store-v5 {
+		.dokan-store-top-jumbotron {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding-left: 0.9375rem;
+			padding-right: 0.9375rem;
+		}
+	}
+}

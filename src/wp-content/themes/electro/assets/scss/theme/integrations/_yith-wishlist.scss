@@ -1,0 +1,153 @@
+/*===================================================================================*/
+/*  YITH Wishlist
+/*===================================================================================*/
+
+.yith-wcwl-icon {
+	margin-right: 3px;
+}
+
+.yith-wcwl-add-button {
+	.fa-heart-o {
+		font-weight: 400;
+
+		&:before {
+			content: "\f004";
+		}
+	}
+}
+
+.yith-wcwl-wishlistaddedbrowse {
+	> a {display: none;}
+}
+
+.yith-wcwl-wishlistexistsbrowse {
+	.feedback {
+		display: none;
+	}
+
+	> a {
+		&:before {
+			@include fa-icon();
+			margin-right: 5px;
+			content: fa-content($fa-var-check);
+			@include fa-fas;
+		}
+	}
+}
+
+.wishlist-fragment {
+	.wishlist-title-container {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	.wishlist-title {
+		margin-bottom: 15px;
+	}
+
+	.hidden-title-form {
+		> input {
+			width: auto !important;
+			display: inline-block !important;
+		}
+
+		.edit-title-buttons {
+			display: inline-block;
+			margin-left: 12px;
+		}
+
+		.hide-title-form,
+		.save-title-form {
+			height: 30px;
+			width: 30px;
+			color: $white;
+			border-radius: 50%;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 5px;
+		}
+
+		.hide-title-form {
+			background-color: $danger;
+		}
+
+		.save-title-form {
+			background-color: $success;
+		}
+	}
+
+	.show-title-form {
+		padding: .5em 2.134em;
+	}
+}
+
+.yith-wcwl-share {
+	margin-top: 10px;
+
+    h4 {
+        line-height: 20px;
+        padding-bottom: 10px;
+		font-weight: bold;
+	    font-size: 18px;
+    }
+
+	ul {
+		@include list-unstyled;
+		display: flex;
+		margin-bottom: 0;
+	}
+
+    ul > li > a {
+        line-height: 1;
+
+		&::before {
+			@include fa-icon();
+			@include fa-fab;
+		}
+    }
+
+	ul > li {
+		padding-right: 20px;
+	}
+
+	.share-button i {
+		display: none;
+	}
+
+    .facebook{
+        &:before{
+			content: '\f09a';
+			color: #3b5998;
+        }
+    }
+
+    .twitter{
+        &:before{
+            content: '\f099';
+			color: #00aced;
+        }
+    }
+
+    .pinterest{
+        &:before{
+			content: '\f0d2';
+			color: #cb2027;
+        }
+    }
+
+    .googleplus{
+        &:before{
+			content: '\f2b3';
+			color: #dd4b39;
+        }
+    }
+
+    .email{
+        &:before{
+			content: '\f0e0';
+			color: $body-color;
+			@include fa-fas;
+        }
+    }
+}

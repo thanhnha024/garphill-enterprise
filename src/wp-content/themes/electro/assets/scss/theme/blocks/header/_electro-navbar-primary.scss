@@ -1,0 +1,121 @@
+.electro-navbar-primary {
+    @include stretch-full-width();
+
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+
+        .dropdown-menu {
+            li:not(.nav-title) a {
+                font-size: 13.4px;
+            }
+        }
+
+        .dropdown {
+            .menu-item-has-children.open > a {
+                font-weight: 700;
+            }
+        }
+
+        &.yamm>.dropdown:not(.yamm-fw):not(.yamm-hw):not(.yamm-tfw) {
+            position: relative;
+
+            .dropdown-menu {
+                position: absolute;
+            }
+        }
+
+        .dropdown > .dropdown-menu  .dropdown-submenu {
+            position: relative;
+
+            > .dropdown-menu {
+                top: 0 !important;
+                left: 100%;
+                position: absolute;
+            }
+
+            &.menu-item-has-children>a{
+                &:hover,&:focus {
+                    color: #212529;
+                }
+
+                &::after {
+                    @include fa-icon();
+                    @include fa-fas;
+                    content: "\f054" #{"/*rtl:\"\f053\" */"};
+                    line-height: inherit;
+                    float: right;
+                    color: #656565;
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .yamm-fw,
+        .yamm-hw,
+        .yamm-tfw {
+            > .dropdown-menu {
+                overflow: hidden;
+                position: absolute;
+            }
+        }
+
+        > .menu-item {
+            > .dropdown-menu {
+                margin-top: 0;
+            }
+
+            > a {
+                display: block;
+                color: #333c48;
+                font-size: 1em;
+                font-weight: 700;
+                padding: 0.786em 1em;
+            }
+
+            & + .menu-item {
+                > a {
+                    border-left: 1px solid transparent;
+                }
+            }
+
+            &.menu-item-has-children {
+                > a {
+                    &:after {
+                        font-size: 0.786em;
+                        line-height: 1;
+                        margin-left: 5px;
+                        margin-top: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    .yamm {
+        .nav-title a {
+            &:hover,&:focus {
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+
+        .yamm-content {
+            padding: 14px 26px 21px;
+
+            li:not(.nav-title) a {
+                line-height: 1.2;
+                font-size: 13.4px;
+            }
+
+            ul {
+                margin-bottom: 10px;
+            }
+        }
+
+        .yamm-fw .dropdown-menu {
+            width: 100%;
+        }
+    }
+}

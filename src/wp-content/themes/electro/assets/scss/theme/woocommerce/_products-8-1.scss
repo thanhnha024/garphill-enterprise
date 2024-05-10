@@ -1,0 +1,126 @@
+.products-8-1 {
+    background-color: lighten($border-color, 9%);
+    padding: 2.357em 0;
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+.columns-8-1 {
+    margin: 0 -2px;
+
+    ul.products {
+        margin-bottom: 0;
+
+        > li.product {
+            border: 2px solid lighten($border-color, 9%);
+            background-color: $white;
+
+            @include remove-after-border();
+
+            @include media-breakpoint-only(md) {
+                &:nth-child(1n+5) {
+                    display: none;
+                }
+            }
+
+            @include media-breakpoint-between(lg,xxl) {
+                &:nth-child(1n+7) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .product-main-8-1 {
+        ul.products {
+            height: 100%;
+
+            .product-inner {
+                height: 100%;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .flex-div {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    @include media-breakpoint-only(md) {
+        > .products-8 {
+            @include make-col(5.5);
+        }
+
+        > .product-main-8-1 {
+            border-top-width: 0;
+            @include make-col(6.5);
+        }
+    }
+}
+
+.product-main-8-1 {
+    ul.products {
+        margin-bottom: 0;
+        height: 100%;
+    }
+
+    .images {
+        margin-bottom: 0.714em;
+    }
+
+    .thumbnails {
+        display: flex;
+
+        > a {
+            display: block;
+            width: 75px;
+            border: 1px solid #e9e9e9;
+            margin-right: 10px;
+
+            > img {
+                border-bottom: 1px solid transparent;
+            }
+
+            &:hover,&:focus {
+                border-bottom: 1px solid transparent;
+
+                > img {
+                    border-bottom: 1px solid transparent;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .images {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        ul.products > li.product {
+
+            .product-loop-footer {
+                margin-top: auto;
+            }
+
+            &:hover {
+                .product-inner {
+                    height: calc( 100% + 35px );
+                }
+
+                .flex-div {
+                    height: calc( 100% - 35px );
+                }
+            }
+        }
+    }
+}

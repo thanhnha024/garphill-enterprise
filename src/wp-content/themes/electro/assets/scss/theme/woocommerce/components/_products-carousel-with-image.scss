@@ -1,0 +1,137 @@
+.products-carousel-with-image {
+	background-color: #f9f9f9;
+	padding: 58px 0 0;
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
+	margin-bottom: 85px;
+
+	.container {
+		padding: 0 15px;
+	}
+
+	.products-carousel {
+		.owl-item {
+			.product {
+				&::after {
+					content: none;
+				}
+			}
+			.product-inner {
+				background-color: $white;
+			}
+		}
+
+		.owl-dots {
+			display: none;
+		}
+	}
+
+	section.section-products-carousel header {
+		margin-bottom: 1.357em;
+	}
+
+	section {
+		margin-bottom: 2.857em;
+	}
+}
+
+.vc-products-carousel-with-image {
+	.products-carousel .owl-item {
+		.product-inner {
+			background-color: $white;
+		}
+	}
+}
+
+.products-carousel-with-image {
+    padding: 3.357em 0;
+    margin-bottom: 3.143em;
+
+    @include media-breakpoint-up(xl) {
+        padding-bottom: calc( 3.357em - 23px ); // height of owl dots
+
+        .products-carousel {
+            .owl-dots {
+                display: block;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.products-carousel-with-image-inner {
+    section.section-products-carousel {
+        margin-bottom: 0;
+
+        header {
+            margin-bottom: 0.857em;
+        }
+    }
+
+    .product-card {
+        .card-body-inner {
+            position: inherit;
+        }
+
+        .yith-wcqv-button {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    }
+
+    .image-block {
+        display: none;
+		position: relative;
+
+        > img {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            max-height: 100%;
+        }
+
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+    }
+
+    .section-product-cards-carousel {
+        header {
+            margin-bottom: 30px;
+        }
+
+        ul.products>li.product-card {
+            border-bottom: 8px solid transparent !important;
+
+			@include media-breakpoint-up(md) {
+				@include make-col(6);
+			}
+
+            &::after {
+                border-right: 8px solid transparent;
+                height: 100%;
+            }
+
+            .product-inner {
+                background-color: $white;
+                margin: 0 2px;
+                @include media-breakpoint-up(xl) {
+                    max-width: 273px;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    max-width: 330px;
+                }
+            }
+        }
+
+        .owl-dots {
+            padding-bottom: 30px;
+        }
+    }
+}

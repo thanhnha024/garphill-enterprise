@@ -1,0 +1,26 @@
+.dokan-rating .star-rating {
+	float: left;
+}
+
+.dokan-store {
+	.comment-text {
+		display: table;
+		width: 100%;
+
+		p {
+			display: table-footer-group;
+		}
+	}
+}
+
+.store-review-wrap {
+    #reviews:not(.electro-advanced-reviews) #comments>h2{
+        font-size: 1.5em;
+        text-align: left;
+        border-bottom: none;
+
+        &:after {
+            content: none;
+        }
+    }
+}

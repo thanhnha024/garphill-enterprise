@@ -1,0 +1,62 @@
+.demo_store {
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 12px 1em;
+	z-index: 999;
+	text-align: center;
+	font-weight: bold;
+	top: 0;
+
+	@include media-breakpoint-up(md) {
+		line-height: 2;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 0 0 2.6180340252em;
+	}
+
+	a {
+		text-decoration: underline;
+		display: block;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.admin-bar .demo_store {
+	top: 46px;
+
+	@include media-breakpoint-up(lg) {
+		top: 32px;
+	}
+}
+
+.woocommerce-demo-store:not(.woocommerce-store-notice-dismissed) #page {
+	margin-top: 92px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 52px;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.admin-bar:not(.woocommerce-store-notice-dismissed) .handheld-stick-this.stuck {
+		top: 136px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.demo_store {
+		a {
+			background: rgba(#000,.1);
+			float: right;
+			display: inline-block;
+			margin: 0;
+			padding: 12px 2.6180340252em;
+		}
+	}
+}

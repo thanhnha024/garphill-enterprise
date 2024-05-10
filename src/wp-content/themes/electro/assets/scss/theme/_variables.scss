@@ -1,0 +1,69 @@
+// Electro Variables
+$footer-bottom-bg: 			#f8f8f8;
+$product-title-color: 		#0062bd;
+
+// Electro Dark
+$dark-bg:                   #181818;
+$dark-bg-secondary:         #212121;
+$dark-border:               rgb(47, 51, 54);
+$dark-border-secondary:     rgb(110, 118, 125);
+$dark-text-primary:         rgb(217, 217, 217);
+$dark-text-secondary:       rgb(110, 118, 125);
+$dark-price:                rgb(29, 161, 242);
+$dark-ins:                  rgb(224, 36, 94);
+
+// Bootstrap-v5 variable overrides
+$enable-shadows:                    true;
+$enable-negative-margins:     true !default;
+
+$gray-100:                          #f8f9fa !default;
+
+//color
+$primary:                           #fed700;
+$red:                               #ee0000;
+$yellow:                            #f0ad4e;
+$green:                             #5cb85c;
+$cyan:                              #5bc0de;
+
+$border-radius:                     1.375rem;
+$border-radius-sm:                  1.25rem;
+$border-radius-lg:                  1.75rem;
+
+$box-shadow:                        0 .125rem .312rem rgba(#000, .28);
+$btn-box-shadow:                    0 0 0 rgba(#fff, 0);
+$btn-focus-width:                   0;
+$btn-focus-box-shadow:              $btn-box-shadow;
+$btn-active-box-shadow:             $btn-box-shadow;
+
+$link-color:                        #333e48;
+
+$font-weight-bolder:                700 !default;
+
+$caret-spacing:                     8px;
+$caret-vertical-align:              -.125em;
+
+$dropdown-min-width:                12.5rem;
+$dropdown-item-padding-x:           1.42rem;
+$dropdown-border-radius:            7px;
+$dropdown-link-active-color:        shade-color($link-color, 10%) !default;
+$dropdown-link-active-bg:           shade-color($gray-100, 5%) !default;;
+
+$navbar-toggler-focus-width:        0;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:               .594rem;
+$input-btn-padding-x:               1rem;
+
+$input-box-shadow:                  0;
+$input-focus-box-shadow:            $input-box-shadow;
+$input-border-color:                #ddd;
+
+$form-select-box-shadow:            0;
+$form-select-focus-box-shadow:      $input-box-shadow;
+
+$tooltip-border-radius:             7px;
+$tooltip-padding-y:                 10px !default;
+$tooltip-padding-x:                 $tooltip-padding-y !default;

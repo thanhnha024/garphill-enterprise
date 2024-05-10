@@ -1,0 +1,113 @@
+.header-v9 {
+    box-shadow: 0px 4px 5.88px 0.12px rgba(0, 0, 0, 0.12);
+
+    .masthead {
+        padding-top: .5rem;
+
+        .off-canvas-navigation-wrapper {
+            @include media-breakpoint-up(xl) {
+                margin-left: 30px;
+            }
+        }
+    }
+
+    .navbar-search .search-categories {
+        @include media-breakpoint-only(xl) {
+			display: none !important;
+		}
+    }
+
+    .electro-header-v9-navbar {
+        .navbar-nav {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+
+            .dropdown.show {
+                position: relative;
+            }
+
+            @include media-breakpoint-up(xl) {
+                .yamm-fw .dropdown-menu{
+                    width: 100%;
+                }
+
+                .yamm-tfw .dropdown-menu,
+                .yamm-hw .dropdown-menu {
+                    left: auto !important;
+                }
+            }
+
+            >.dropdown>.dropdown-menu{
+                top: 100% !important;
+            }
+
+            .dropdown-menu {
+                position: absolute;
+            }
+
+            .dropdown-submenu.open > .dropdown-menu,
+            .dropdown-submenu > .dropdown-menu {
+                position: absolute;
+                left: 100%;
+                top: 0 !important;
+            }
+
+            .dropdown-menu .menu-item-has-children>a{
+                &:hover,&:focus {
+                    color: #212529;
+                }
+
+                &::after {
+                    @include fa-icon();
+                    @include fa-fas;
+                    content: "\f054" #{"/*rtl:\"\f053\" */"};
+                    line-height: inherit;
+                    float: right;
+                    color: #656565;
+                    font-size: 10px;
+                }
+            }
+
+            > .menu-item {
+                padding: 1.1rem 0;
+
+                &:not(:last-child) {
+                    margin-right: 1.5rem;
+                }
+
+                > a {
+                    font-size: 0.9rem;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        font-size: 1.25038rem;
+                        margin-right: 0.5rem;
+                    }
+                }
+
+                &.highlight {
+                    > a {
+                        color: #f73939;
+                    }
+                }
+            }
+        }
+    }
+
+    .secondary-nav>.dropdown.yamm-fw .dropdown-menu {
+        @media (min-width: 1200px) {
+            width: calc((1200px - 300px));
+            left: auto;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .masthead {
+            padding-top: 1.5rem;
+        }
+    }
+}

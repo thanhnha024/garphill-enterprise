@@ -1,0 +1,21 @@
+.header-support-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    .support-info {
+        flex: 0 0 auto;
+        max-width: auto;
+    }
+
+    .support-icon {
+        margin-right: 1em;
+        .fa {
+            font-size: 3em;
+        }
+
+        .ec {
+            font-size: 3.571em;
+        }
+    }
+}

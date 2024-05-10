@@ -1,0 +1,111 @@
+.deal-products-carousel {
+    @include stretch-full-width();
+    background: #f9f9f9;
+    padding: 2em 0;
+
+    .product {
+        background-color: #fff;
+    }
+
+    .owl-dots {
+        margin-top: 10px;
+        display: block;
+    }
+
+    .section-products-carousel {
+        margin-bottom: 0;
+    }
+
+    .deal-products-timer {
+        margin-bottom: 1.429em;
+
+        .marketing-text {
+            line-height: 1.286em;
+            color: #383838;
+            margin-bottom: 0.714em;
+        }
+
+        .deal-percentage {
+            font-size: 9.286em;
+            margin-bottom: 0.077em;
+            line-height: 1em;
+        }
+    }
+
+    .deal-countdown {
+        color: #383838;
+
+        span[data-value="0"] {
+            display: none;
+        }
+
+        > span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-width: 2px;
+            border-style: solid;
+            background: #fff;
+            border-radius: 4px;
+            letter-spacing: -0.01em;
+            width: 43px;
+            height: 54px;
+            font-weight: 400;
+            margin-right: 12px;
+            padding: 10px 0;
+
+            .value {
+                font-size: 1.643em;
+                line-height: 1em;
+            }
+
+            b {
+                font-size: 0.571em;
+                line-height: 1.750em;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-top: 2.857em;
+        padding-bottom: 0.714em;
+
+        .deal-products-timer {
+            header{
+                margin-top: 0.857em;
+
+                .h1 {
+                    line-height: 1.273em;
+                    padding-bottom: 0.7em;
+
+                    &:after {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        .product {
+            @include remove-after-border();
+        }
+
+        .deal-products-timer {
+            @include make-col(2.3);
+        }
+
+        .deal-products {
+            @include make-col(9.7);
+        }
+
+        .products-carousel .owl-stage-outer {
+            width: 100%;
+        }
+    }
+}

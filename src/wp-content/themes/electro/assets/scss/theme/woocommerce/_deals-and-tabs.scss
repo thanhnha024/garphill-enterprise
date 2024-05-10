@@ -1,0 +1,99 @@
+.deals-and-tabs {
+    .deals-block {
+        @include media-breakpoint-up(sm) {
+            padding-right: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-right: 15px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            flex: 0 0 400px;
+            max-width: 400px;
+        }
+    }
+
+    .tabs-block {
+        margin-bottom: 2em;
+
+        @include media-breakpoint-up(xxl) {
+            @include make-auto-col();
+        }
+
+        &.tabs-block-stretch {
+            @include make-col(12);
+        }
+    }
+}
+
+.section-onsale-product {
+    header {
+        align-items: center;
+
+        h1,.h1 {
+            &:after {
+                border-bottom-width: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-top: 10px;
+        padding-bottom: 7px;
+        border-radius: 21px;
+
+        header {
+            margin-bottom: 0;
+        }
+
+        .onsale-product {
+            .product-thumbnail {
+                margin-bottom: 10px;
+            }
+
+            .price {
+                margin-bottom: 17px;
+            }
+
+            .deal-progress .progress {
+                margin-bottom: 17px;
+            }
+
+            .countdown>span .value {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.home-v1-deals-and-tabs {
+    .tab-content {
+        ul.products>li.product {
+            @include media-breakpoint-only(lg) {
+                @include make-col(4);
+
+                &:nth-child(3n), &:last-child {
+                    @include remove-after-border();
+                }
+
+                &:nth-child(5n) {
+                    @include add-after-border();
+                }
+            }
+
+            @include media-breakpoint-only(xl) {
+                &:nth-child(1n+7) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.products-carousel-tabs-with-deal,
+.home-v1-deals-and-tabs  {
+    .deals-block {
+        .onsale {display: none;}
+    }
+}

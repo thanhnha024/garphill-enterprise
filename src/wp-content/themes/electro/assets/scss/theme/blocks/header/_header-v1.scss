@@ -1,0 +1,47 @@
+.header-v1 {
+    &.stuck {
+        background-color: #fff;
+        box-shadow: 0 0 17px -1px rgba(0,0,0,.66);
+
+        .container > .row:nth-child(2) {
+            display: none;
+        }
+
+        .container>.row:first-child {
+            margin-bottom: 0.714em;
+        }
+
+        .electro-navigation {
+            display: none;
+        }
+
+        .masthead {
+            padding: .7em 0;
+        }
+    }
+
+    .masthead {
+        padding: 2.286em 0 1.857em;
+    }
+
+    .electro-navigation {
+        .departments-menu-v2-title {
+            line-height: 3.214em;
+        }
+    }
+}
+
+.page-template-template-homepage-v8 {
+    .header-v1 {
+        border-bottom-width: 0;
+
+        .electro-navigation {
+            margin-bottom: 0;
+
+            .departments-menu-v2-title {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+}

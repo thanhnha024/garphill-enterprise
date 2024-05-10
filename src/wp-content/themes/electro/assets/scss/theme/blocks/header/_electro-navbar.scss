@@ -1,0 +1,25 @@
+.electro-navbar-inner {
+    height: 50px;
+    align-items: center;
+
+    .departments-menu-v2 {
+        @include make-col(3);
+        align-self: stretch;
+    }
+
+    .navbar-search {
+        padding-right: 0;
+    }
+
+    .header-icons {
+        padding-left: 0;
+    }
+
+    .departments-menu-v2-icon {
+        margin-left: 1em;
+    }
+}
+
+.electro-navbar {
+    @include stretch-full-width();
+}

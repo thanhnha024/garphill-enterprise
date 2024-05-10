@@ -1,0 +1,194 @@
+section {
+    margin-bottom: 2em;
+
+    > h2 {
+    	font-size: 1.786em;
+    	line-height: 1.6em;
+    	position: relative;
+    	margin-bottom: 1.6em;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px solid $border-color;
+        margin-bottom: 0;
+
+        .h1, h1 {
+            font-size: 17px;
+            font-weight: bold;
+            line-height: 1.6em;
+			display: inline-block;
+			padding-bottom: 0.400em;
+			position: relative;
+			margin-bottom: 0;
+
+            &:after {
+				content: ' ';
+				border-bottom: 2px solid transparent;
+				display: block;
+				position: absolute;
+				bottom: -1px;
+				width: 100%;
+			}
+        }
+
+        &.show-nav {
+            display: block;
+            border-bottom-width: 0;
+            margin-bottom: 0;
+
+            .h1, h1 {
+                z-index: 1;
+            }
+
+            .action-text {
+                padding-bottom: 12px;
+                font-size: 1em;
+                line-height: 1.286em;
+            }
+        }
+
+        .owl-nav > a {
+            font-size: 1.429em;
+
+            &:not(:hover):not(:focus) {
+                color: lighten($body-color, 50%);
+            }
+
+            & + a {
+                margin-left: 0.400em;
+            }
+        }
+
+        .action-text {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+
+            &:not(:hover):not(:focus) {
+                color: lighten($body-color, 20%);
+            }
+
+            &:after {
+                content: '\79';
+                transform: rotate(-90deg) #{"/*rtl:rotate(90deg) */"};
+                font-size: 1.214em;
+                font-family: font-electro;
+                margin-left: 11px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 2.857em;
+
+        header {
+            margin-bottom: 1.429em;
+
+            .h1, h1 {
+                font-size: 1.571em;
+                font-weight: normal;
+                flex-shrink: 0;
+                margin-right: 20px;
+            }
+
+            &.show-nav {
+                display: flex;
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 1em;
+
+                .h1, h1 {
+                    margin-bottom: 0;
+                    z-index: 0;
+                }
+            }
+
+            .action-text {
+                font-size: 1em;
+                line-height: 1.286em;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        header {
+            &.show-nav {
+                .h1, h1 {
+                    white-space: nowrap;
+                    margin-right: 2em;
+                }
+            }
+        }
+    }
+
+    &.section-products-carousel {
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 1.214em;
+
+            .products-carousel {
+                padding-bottom: 2.5em;
+            }
+        }
+    }
+}
+
+.show-nav .nav {
+    flex-wrap: nowrap;
+    overflow: auto;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+    border-top: 1px solid $border-color;
+    align-items: center;
+    line-height: 1;
+
+    .nav-item {
+        margin: 0;
+        flex-shrink: 0;
+
+        &.active .nav-link {
+            border-radius: 1em;
+            padding: 0.301em 1.429em;
+            border: 2px solid transparent;
+        }
+
+        & + .nav-item {
+            padding-left: 0;
+            margin-left: 1em;
+
+            @include media-breakpoint-only(xl) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .nav-link {
+        font-size: 1.071em;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-top: 0;
+        padding-bottom: 0em;
+        font-size: 12px;
+        border-top-width: 0;
+
+        .nav-item {
+            &.active .nav-link {
+                background-color: transparent !important;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 14px;
+
+        .nav-item {
+            &:not(.active) .nav-link:not(:hover):not(:focus) {
+                color: lighten($body-color, 35%);
+            }
+        }
+    }
+}

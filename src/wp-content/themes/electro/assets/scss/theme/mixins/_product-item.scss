@@ -1,0 +1,11 @@
+@mixin remove-after-border() {
+    &::after {
+        content: none;
+    }
+}
+
+@mixin add-after-border() {
+    &::after {
+        content: ' ';
+    }
+}

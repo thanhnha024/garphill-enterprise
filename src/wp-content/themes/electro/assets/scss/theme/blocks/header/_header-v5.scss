@@ -1,0 +1,84 @@
+.header-v5 {
+    .masthead {
+        padding: 9px 0;
+
+        .header-logo-area {
+            flex: 0 0 230px;
+            max-width: 230px;
+            min-width: 230px;
+        }
+
+        .header-site-branding {
+            svg {
+                max-width: 126px;
+            }
+        }
+    }
+
+    .electro-navigation-v5 {
+        width: 100vw;
+        position: relative;
+        margin-left: calc(-50vw + 50%);
+        background-color: $white;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
+        border-bottom: 1px solid #d7d7d7;
+    }
+
+    .electro-navigation {
+        margin-bottom: 0;
+
+        .departments-menu-v2 {
+            flex: 0 0 230px;
+            max-width: 230px;
+            min-width: 230px;
+
+            > .dropdown > .dropdown-menu{
+                border-top-width: 2px;
+                border-top-style: solid;
+                top: 100% !important;
+            }
+        }
+
+        .departments-menu-v2-title {
+            line-height: 35px;
+        }
+    }
+
+    .secondary-nav {
+        font-size: 13px;
+        line-height: 35px;
+
+        > .menu-item {
+            > a {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .departments-menu-v2-title {
+        background-color: $white;
+        border-radius: 0;
+        padding: 0;
+
+        .departments-menu-v2-icon {
+            margin-right: 0;
+            margin-left: 6px;
+        }
+    }
+
+    .header-icon-counter {
+        background-color: $white;
+    }
+
+    .stuck {
+        box-shadow: 0 0 10px -1px rgba(0,0,0,.5);
+
+        .masthead {
+            padding: 10px 0;
+        }
+
+        .electro-navigation-v5 {
+            display: none;
+        }
+    }
+}

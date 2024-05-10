@@ -1,0 +1,93 @@
+.products-6-1-with-categories {
+    @include media-breakpoint-up(xl) {
+        header {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.products-6-1-with-categories-inner {
+    .products-6 {
+        ul.products>li.product {
+            @include media-breakpoint-only(xl) {
+                &:nth-child(1n+7) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .products-block {
+        .columns-6-1>.product-main-6-1 {
+            .products>.product::after {
+                content: none;
+            }
+
+            > .woocommerce {
+                height: 100%;
+            }
+
+            ul.products > li.product {
+                border-bottom-width: 1px;
+                height: 100%;
+            }
+        }
+
+        .products-6 ul.products > li.product {
+            border-bottom-width: 1px;
+
+            &:after {
+                border-right-width: 1px;
+                height: 80%;
+            }
+
+            &:nth-last-child(2),
+            &:last-child {
+                border-bottom-width: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .products-block {
+            .products-6 ul.products > li.product {
+                border-bottom-width: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .products-block {
+            .columns-6-1 {
+                > .product-main-6-1 {
+                    ul.products > li.product {
+                        border-bottom-width: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .categories-menu-list {
+            padding-right: 22px;
+            flex: 0 0 222px;
+            max-width: 222px;
+            margin-top: 24px;
+        }
+
+        .products-block {
+            .columns-6-1 {
+                > .product-main-6-1 {
+                    flex: 0 0 38.666667%;
+                    max-width: 38.666667%;
+                }
+
+                > .products-6 {
+                    flex: 0 0 61.333333%;
+                    max-width: 61.333333%;
+                }
+            }
+        }
+    }
+}

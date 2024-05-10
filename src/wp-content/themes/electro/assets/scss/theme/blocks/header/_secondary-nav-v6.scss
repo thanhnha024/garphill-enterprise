@@ -1,0 +1,115 @@
+.secondary-nav-v6 {
+    margin-bottom: 20px;
+
+    .dropdown.show > .dropdown-menu {
+        top: 100% !important;
+    }
+
+    .secondary-nav-v6-inner, .widget_nav_menu {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+
+        span.title, .widgettitle {
+            font-weight: 700;
+            white-space: pre;
+            font-size: 0.929em;
+            letter-spacing: -0.01em;
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        > ul.secondary-nav, ul.menu {
+            padding-left: 6px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+
+            > li {
+                line-height: 1.385em;
+
+                > a {
+                    font-size: 0.929em;
+                    font-weight: 400;
+                    padding: 6px 0;
+                }
+
+                &.highlight {
+                    > a {
+                        color: #f73939;
+                    }
+                }
+
+                &.stronghighlight {
+                    > a {
+                        font-weight: 700;
+                    }
+                }
+
+                &.electro-more-menu-item {
+                    font-weight: 700;
+
+                    a {
+                        &:after {
+                            content: none;
+                        }
+                    }
+
+                    .dropdown-menu {
+                        border-radius: 0;
+                        border-top-width: 2px;
+                        border-top-style: solid;
+                        top: 133%;
+
+                        .menu-item {
+                            font-weight: 400;
+
+                            a {
+                                padding: 3px 20px;
+                                display: block;
+                                color: $body-color;
+                                text-decoration: none;
+                                line-height: 1.615em;
+
+                                &:hover {
+                                    background-color: transparent;
+                                    color: darken($body-color, 30%);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & + li {
+                    &:before {
+                        content: '|';
+                        color: #cad5d5;
+                        display: inline-block;
+                        margin: 0 .55em 0 0.8em;
+                    }
+                }
+            }
+
+            >.menu-item {
+                & +.menu-item {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .yamm-fw .dropdown-menu {
+        width: 100%;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .yamm-tfw .dropdown-menu,
+        .yamm-hw .dropdown-menu {
+            left: auto !important;
+        }
+    }
+}

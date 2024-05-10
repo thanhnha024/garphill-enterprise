@@ -1,0 +1,45 @@
+ul.dropdown-menu-user-account {
+    right: -50px !important;
+    left: auto !important;
+    top: 100% !important;
+}
+
+.register-sign-in-dropdown-inner {
+    min-width: 220px;
+    text-align: center;
+    font-size: 12px;
+    padding-left: 21px;
+    padding-right: 21px;
+
+    p {
+        margin: 0;
+    }
+
+    .sign-in-action {
+        padding: 10px 0;
+    }
+
+    .register {
+        border-top: 1px solid #ebebeb;
+        padding: 10px 0;
+    }
+}
+
+.sign-in-button {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: .25em .5em;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 4px;
+    font-weight: 600;
+}

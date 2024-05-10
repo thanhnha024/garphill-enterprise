@@ -1,0 +1,31 @@
+.header-v10 {
+    @include media-breakpoint-up(xl) {
+        margin-bottom: -1.5rem;
+        display: inline-block;
+        width: 100%;
+
+        .stick-this.stuck {
+            background-color: #fff;
+            padding-bottom: 15px;
+            box-shadow: 0 0 17px -1px rgba(0, 0, 0, 0.66);
+        }
+    }
+
+    .masthead {
+        padding: 1.813rem 0;
+
+        .navbar-search {
+            z-index: 3;
+        }
+    }
+
+    .secondary-nav-menu {
+        border-radius: .625rem;
+        padding: 0 2.313rem;
+        z-index: 2;
+    }
+
+    .secondary-nav {
+        line-height: 3.58em;
+    }
+}

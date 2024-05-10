@@ -1,0 +1,93 @@
+.features-list {
+	border: 1px solid $border-color;
+	border-radius: 8px;
+	margin-bottom: 1.643em;
+	margin-left: 0;
+    margin-right: 0;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: space-between;
+
+	.media {
+		width: 150px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+	}
+
+	.media-left,
+	.feature-icon {
+		padding-right: 10px;
+
+		i {
+			font-size: 2.571em;
+		}
+
+		i.ec-customers {
+			font-size: 3.386em;
+		}
+	}
+
+	.media-body {
+		text-align: center;
+		font-size: 1em;
+        line-height: 1.25;
+		flex-grow: 1;
+	}
+
+	.feature {
+		padding-top: 1.357em;
+        padding-bottom: 0.929em;
+	}
+
+	.feature + .feature {
+		border-left: 1px solid $border-color;
+	}
+
+	.feature-text {
+		strong {
+			display: block;
+		}
+	}
+}
+
+.features-list {
+    .feature {
+        border-bottom: none;
+        padding-right: 0;
+        display: flex;
+        margin: auto;
+
+		@include media-breakpoint-down(lg) {
+			flex: 0 0 auto;
+	        width: 180px;
+		}
+
+        .media {
+            margin: auto;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .feature {
+            padding-right: 15px;
+        }
+
+        &.row-cols-lg-1 {
+            flex-direction: column;
+
+            .feature {
+                border-bottom: 1px solid $border-color;
+				width: 100%;
+
+                &:last-child {
+                    border-bottom-width: 0;
+                }
+            }
+        }
+
+        &.row-cols-lg-5 .feature {
+            @include make-col(2.4);
+        }
+    }
+}

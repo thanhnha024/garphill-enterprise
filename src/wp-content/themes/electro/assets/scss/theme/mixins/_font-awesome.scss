@@ -1,0 +1,37 @@
+// Mixins
+// --------------------------
+
+@mixin fa-icon {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: -.125em;
+}
+
+@mixin fa-icon-rotate($degrees, $rotation) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})";
+  transform: rotate($degrees);
+}
+
+@mixin fa-icon-flip($horiz, $vert, $rotation) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)";
+  transform: scale($horiz, $vert);
+}
+
+@mixin fa-fas {
+	font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+@mixin fa-far {
+	font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+}
+
+@mixin fa-fab{
+	font-family: 'Font Awesome 5 Brands';
+}

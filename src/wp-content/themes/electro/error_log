@@ -1,0 +1,20 @@
+[02-Feb-2024 10:15:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function electro_get_header() in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php on line 14
+[16-Feb-2024 09:10:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function electro_get_header() in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php on line 14
+[14-Mar-2024 22:53:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function electro_get_header() in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php on line 14
+[22-Mar-2024 07:05:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function electro_get_header() in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php on line 14
+[04-Apr-2024 18:26:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function electro_get_header() in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home5/zippysg/garphil.com.sg/wp-content/themes/electro/index.php on line 14

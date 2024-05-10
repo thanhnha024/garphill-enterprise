@@ -1,0 +1,63 @@
+.woocommerce-page,
+.seller-items {
+    .page-header {
+        @include media-breakpoint-up(md) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .woocommerce-result-count {
+            margin-bottom: 0;
+        }
+    }
+
+    .shop-control-bar-bottom {
+        display: flex;
+        align-items: center;
+        padding: 1em 0;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include media-breakpoint-up(sm) {
+            flex-direction: row;
+        }
+
+        .woocommerce-result-count {
+            float: none;
+            line-height: 1;
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            @include media-breakpoint-up(sm) {
+                margin: .5em 0;
+            }
+        }
+    }
+}
+
+.woocommerce-page,
+.dokan-store {
+	.page-header {
+		position: relative;
+		margin-bottom: 1em;
+	}
+
+	.page-title {
+		font-size: 1.786em;
+		line-height: 1.6em;
+		margin: 0;
+	}
+}
+
+.dokan-store {
+    .page-header {
+		.woocommerce-result-count {
+			position: absolute;
+			margin: 0;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}

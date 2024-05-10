@@ -1,0 +1,147 @@
+.shop-control-bar {
+	display: flex;
+	border-radius: 0;
+	align-items: center;
+	justify-content: space-between;
+	padding: .4em 1.429em;
+	background-color: lighten($border-color, 7%);
+
+	@include media-breakpoint-up(xl) {
+		justify-content: flex-start;
+		padding: 0.2em 1.429em;
+		border-radius: 9px;
+
+	    .handheld-sidebar-toggle {
+	        display: none;
+	    }
+	}
+
+	.btn.sidebar-toggler {
+		padding: 0;
+		border-radius: 0;
+		background-color: transparent;
+		border-width: 0;
+
+		&:focus,&:hover {
+			color: $body-color;
+		}
+
+		span {
+			padding-left: 10px;
+		}
+	}
+
+	.shop-view-switcher {
+		border-bottom-width: 0;
+		margin-right: auto;
+
+		.nav-link {
+			font-size: 1.286em;
+			line-height: 2.24em;
+			border: none;
+			border-radius: 0;
+			padding: 0;
+
+			&:not(:hover):not(:focus):not(.active) {
+				color: lighten($body-color, 60%);
+			}
+
+			&.active {
+				background-color: transparent;
+			}
+		}
+
+		.nav-item {
+			& + .nav-item {
+				margin-left: 2.5em;
+
+				@include media-breakpoint-up(lg) {
+					margin-left: 1.071em;
+				}
+			}
+		}
+	}
+
+	.woocommerce-ordering,
+	.form-electro-wc-ppp {
+		padding: 3px 0;
+	}
+
+	.form-electro-wc-ppp {
+		margin-left: 1em;
+	}
+
+	.electro-advanced-pagination,
+	.form-electro-wc-ppp,
+	.shop-view-switcher {
+		display: none;
+
+		@include media-breakpoint-up(xl) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.electro-advanced-pagination {
+		margin-left: auto;
+		line-height: 2.43em;
+    	padding: 1px 0;
+	}
+}
+
+.shop-control-bar-bottom {
+	border-top: 1px solid lighten($border-color, 4%);
+	padding: 1.714em 0;
+
+	.form-electro-wc-ppp {
+		float: left;
+		padding: 0.215em 0;
+	}
+
+	.woocommerce-result-count {
+		margin-bottom: 0;
+		float: left;
+		line-height: 3em;
+		margin-left: 2em;
+	}
+}
+
+.form-adv-pagination {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.electro-advanced-pagination {
+	color: lighten($body-color, 20%);
+
+	input[type="number"] {
+		width: 3.335em;
+		text-align: center;
+		padding: 0.201em 0.75em;
+		-moz-appearance: textfield;
+	}
+
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		appearance: none;
+		margin: 0;
+	}
+
+	a.prev {
+		padding-right: 0.600em;
+	}
+
+	a.next {
+		padding-left: 0.600em;
+	}
+
+	a.prev, a.next {
+		font-size: 1.429em;
+
+		&:not(:hover):not(:focus) {
+			color: lighten($body-color, 20%);
+		}
+
+	}
+}

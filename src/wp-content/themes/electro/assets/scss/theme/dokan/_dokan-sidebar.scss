@@ -1,0 +1,263 @@
+.dokan-category-menu,
+.dokan-store-menu {
+	border-width: 0;
+
+	ul {
+		list-style: none;
+	}
+
+	#cat-drop-stack {
+		padding: 0!important;
+		border: 2px solid #ececec;
+		border-radius: 6px;
+
+		ul {
+			margin: 0;
+
+			> li {
+				> a{
+					display: block;
+					font-size: 1em;
+					padding: 0.4em 0 0.4em 2.143em;
+					border-bottom-width: 0 !important;
+					margin: 0 !important;
+				}
+
+				&:last-child.has-children a {
+					border-bottom-width: 0 !important;
+				}
+
+				&.has-children {
+					> a {
+						padding-left: 0;
+					}
+
+					.caret-icon {
+						position: static;
+						width: auto;
+						right: unset;
+						float: left;
+						padding-left: 1.214em;
+						padding-right: .429em;
+
+						i {
+							font-size: .857em;
+						    color: #aeaeae;
+						    width: .571em;
+						}
+					}
+
+					.sub-category {
+						.sub-block {
+							h3 {
+								font-size: inherit;
+								margin: 0;
+								border-top: 1px solid $border-color;
+
+								a {
+									color: $body-color;
+									display: block;
+									padding: 0.571em 0 0.643em 25px;
+								    line-height: 22px;
+
+									&:before {
+										content: none;
+									}
+								}
+							}
+						}
+					}
+
+					.children {
+						background-color: transparent !important;
+						padding: 0 0 0 1em;
+						padding-top: 0;
+						padding-right: 0;
+						padding-bottom: 0;
+
+						li {
+							border-top-width: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ul li {
+		border-top: 1px solid $border-color;
+
+		&:first-child {
+			border: none;
+		}
+	}
+}
+
+.dokan-widget-area,
+.dokan-store-list-sidebar {
+	.widget {
+		margin-bottom: 5.143em;
+
+		.widget-title {
+			position: relative;
+			font-size: 1.357em;
+			line-height: 0.947em;
+			margin-bottom: 1.842em;
+			padding: 0 0 1.053em;
+			border-width: 0;
+			border-bottom: 1px solid $border-color;
+			background-color: transparent;
+
+			&:after {
+				border-bottom: 2px solid transparent;
+				bottom: -1px;
+				content: " ";
+				display: block;
+				position: absolute;
+				width: 3.684em;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.widget {
+	&.dokan-store-contact {
+		form.seller-form {
+			ul {
+				padding: 0;
+				list-style: none;
+			}
+
+			input[type="submit"],
+			.dokan-btn {
+				color: $body-color;
+			}
+		}
+	}
+
+	&.dokan-best-seller-widget,
+	&.dokan-feature-seller-widget {
+		ul.dokan-best-sellers,
+		ul.dokan-feature-sellers {
+			> li {
+				margin-bottom: 2.143em;
+
+				> a{
+					color: $body-color;
+					display: block;
+					font-weight: 400;
+					font-size: 1em;
+					line-height: 1.2em;
+				}
+
+				i {
+					color: #fed700;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	 }
+}
+
+.dokan-store-sidebar {
+	.product_list_widget {
+		.product-title{
+			color: $body-color;
+			font-weight: 400;
+		}
+
+		.electro-price .amount {
+			font-weight: 700;
+			font-size: 1.071em;
+		}
+	}
+
+	.widget_categories ul {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+
+		a {
+			color: $body-color;
+			display: inline-block;
+			padding: .35em 0;
+		}
+	}
+
+	.dokan-store-menu {
+		ul {
+			@include list-unstyled();
+
+			a {
+				color: $body-color;
+				padding: .4em 0;
+				display: block;
+			}
+		}
+	}
+
+	.widget {
+		margin-bottom: 3.3em;
+	}
+
+	.widget-store-owner {
+		.widget-title {
+			font-size: 1.286em;
+			line-height: 1em;
+			margin-bottom: 1.95em;
+			padding-bottom: 1.053em;
+			position: relative;
+			border-bottom: 1px solid $border-color;
+
+			&:after {
+				content: ' ';
+				width: 3.684em;
+				border-bottom: 2px solid transparent;
+				display: block;
+				position: absolute;
+				bottom: -1px;
+			}
+		}
+
+		.store-owner {
+			&-profile {
+				display: flex;
+				align-items: center;
+				margin-bottom: 25px;
+
+				&-info {
+					flex-grow: 1;
+					flex-basis: 0;
+
+					.owner-name {
+						font-size: 15px;
+						margin-bottom: .125rem;
+					}
+				}
+			}
+
+			&-info .owner-joined,
+			&-bio {
+				color: #818181;
+			}
+
+			&-avatar {
+				margin-right: 1rem;
+
+				img {
+					width: 75px;
+					height: 75px;
+					object-fit: cover;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}

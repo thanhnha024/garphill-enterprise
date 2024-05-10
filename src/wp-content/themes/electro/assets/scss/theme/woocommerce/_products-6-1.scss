@@ -1,0 +1,177 @@
+.products-6-1 {
+    background-color: lighten($border-color, 10%);
+    padding: 2.357em 0;
+}
+
+.columns-6-1 {
+    background-color: $white;
+
+    > .product-main-6-1 {
+        border-top: 1px solid #eaeaea;
+
+        ul.products>li.product {
+            height: 100%;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        > .products-6 {
+            @include make-col(5.5);
+        }
+
+        > .product-main-6-1 {
+            border-top-width: 0;
+            @include make-col(6.5);
+
+            .flex-div {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.products-6 {
+    @include media-breakpoint-up(xl) {
+        border-right-width: 5px;
+    }
+
+    ul.products > li.product {
+        @include media-breakpoint-up(md) {
+            border-bottom-color: lighten($border-color, 10%);
+            border-bottom-width: 3px;
+
+            &:after {
+                border-right-color: lighten($border-color, 10%);
+                height: 100%;
+                border-right-width: 3px;
+            }
+        }
+
+        @include media-breakpoint-only(md) {
+            @include make-col(6);
+
+            &:nth-child(odd) {
+                @include add-after-border();
+            }
+
+            &:nth-child(even) {
+                @include remove-after-border();
+            }
+
+            &:nth-child(1n+5) {
+                display: none;
+            }
+        }
+
+        @include media-breakpoint-only(lg) {
+            @include make-col(4);
+
+            &:nth-child(3n) {
+                @include remove-after-border();
+            }
+
+            &:nth-child(1n+7) {
+                display: none;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                border-bottom-width: 3px;
+            }
+
+            &:nth-child(5n):not(:last-child) {
+                @include add-after-border();
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            &:after {
+                border-right-width: 5px;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                border-bottom-width: 5px;
+            }
+        }
+
+        @include media-breakpoint-up(xxl) {
+
+            &:nth-child(4) {
+                border-bottom-width: 5px;
+            }
+        }
+    }
+}
+
+.product-main-6-1 {
+    ul.products {
+        margin-bottom: 0;
+        height: 100%;
+
+        > li.product {
+            @include make-col(12);
+        }
+    }
+
+    .images {
+        margin-bottom: 0.714em;
+    }
+
+    .thumbnails {
+        display: flex;
+
+        > a {
+            display: block;
+            width: 75px;
+            border: 1px solid #e9e9e9;
+            margin-right: 10px;
+
+            > img {
+                border-bottom: 1px solid transparent;
+            }
+
+            &:hover,&:focus {
+                border-bottom: 1px solid transparent;
+
+                > img {
+                    border-bottom: 1px solid transparent;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .images {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        ul.products > li.product {
+
+            .product-loop-footer {
+                margin-top: auto;
+            }
+
+            &:hover {
+                .product-inner {
+                    height: calc( 100% + 35px );
+                }
+
+                .flex-div {
+                    height: calc( 100% - 35px );
+                }
+            }
+        }
+    }
+}

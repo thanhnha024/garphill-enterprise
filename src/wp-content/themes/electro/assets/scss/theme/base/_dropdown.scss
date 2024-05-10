@@ -1,0 +1,52 @@
+// The dropdown menu
+
+.dropdown-menu {
+    border-width: 2px 0 0 0;
+    @include border-top-radius(0);
+    transform: none !important;
+    top: 100% !important;
+
+    > li > a {
+        @extend .dropdown-item;
+    }
+
+    .dropdown-submenu:not([class^='yamm-']):hover {
+        background-color: #e9ecef;
+    }
+}
+
+.dropdown {
+    .dropdown-toggle[data-hover=dropdown] + .dropdown-menu,
+    .dropdown-toggle[data-hover=dropdown] + .dropdown-menu .dropdown-menu,
+    .dropdown-toggle[data-bs-toggle=dropdown]:not([data-hover=dropdown]) + .dropdown-menu,
+    .dropdown-toggle[data-bs-toggle=dropdown]:not([data-hover=dropdown]) + .dropdown-menu .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px) !important;
+        transition: all .15s ease-in;
+    }
+
+    &:hover {
+        .dropdown-toggle[data-hover=dropdown] + .dropdown-menu {
+            transform: scaleY(1) !important;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .dropdown-toggle[data-hover=dropdown] + .dropdown-menu .dropdown-submenu:hover > .dropdown-menu,
+    .dropdown-toggle[data-bs-toggle=dropdown].show:not([data-hover=dropdown]) + .dropdown-menu,
+    .dropdown-toggle[data-bs-toggle=dropdown].show:not([data-hover=dropdown]) + .dropdown-menu .dropdown-submenu.open > .dropdown-menu {
+        transform: scaleY(1) !important;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.dropdown-toggle::after {
+    content: "\f107";
+    border-width: 0;
+    @include fa-icon();
+    @include fa-fas;
+}

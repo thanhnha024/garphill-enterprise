@@ -1,0 +1,97 @@
+.aws-container .aws-search-form {
+    height: 41px;
+    background-color: transparent;
+}
+
+.aws-container .aws-search-form .aws-loader {
+    right: 20px;
+}
+
+.aws-container .aws-search-form .aws-search-clear span {
+    top: 0;
+    margin-top: 0;
+}
+
+.aws-search-result {
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 0px;
+}
+
+.aws-container .aws-search-field {
+    border-width: 2px;
+    border-radius: 2.467em !important;
+    padding: .3em 2.134em;
+    height: 41px;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.aws-container .aws-search-form .aws-search-clear {
+    width: 60px;
+    border-top-right-radius: 2.467em !important;
+    border-bottom-right-radius: 2.467em !important;
+    color: #333e48;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex !important;
+
+    .rtl & {
+        border-top-left-radius: 2.467em !important;
+        border-bottom-left-radius: 2.467em !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+}
+
+.aws-search-form:not(.aws-form-active):not(.aws-processing) .aws-search-clear span,
+.aws-search-form.aws-processing .aws-search-clear span {
+    display: none;
+}
+
+.aws-search-form:not(.aws-form-active):not(.aws-processing) .aws-search-clear::after {
+    font-family: font-electro;
+    content: "\6d";
+    font-size: 1.714em;
+}
+
+.aws-container .aws-search-form.aws-show-clear.aws-form-active .aws-search-clear {
+    display: flex !important;
+}
+
+.header-v2 .aws-container .aws-search-form .aws-search-clear,
+.header-v4 .aws-container .aws-search-form .aws-search-clear,
+.header-v5 .aws-container .aws-search-form .aws-search-clear {
+    background-color: #333e48;
+    color: #fff;
+}
+
+.header-v2 .aws-container .aws-search-field,
+.header-v4 .aws-container .aws-search-field,
+.header-v5 .aws-container .aws-search-field {
+    border-color: #fff;
+}
+
+.header-v7 .aws-container .aws-search-form .aws-search-clear {
+    width: auto;
+    background-color: transparent;
+    font-size: 11px;
+}
+
+.header-v7 .aws-container .aws-search-field {
+    background-color: transparent;
+    border-radius: 0 !important;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    padding: .3em 1.134em;
+    border-bottom: 1px solid rgba(51,62,72,.3);
+}
+
+@media (min-width: 1480px) {
+    .header-v7 .aws-container .aws-search-field {
+        min-width: 242px;
+    }
+}

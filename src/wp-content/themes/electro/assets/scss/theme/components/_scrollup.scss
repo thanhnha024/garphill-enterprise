@@ -1,0 +1,29 @@
+$scrollLength: 100vh;
+
+// Smooth scrolling IF user doesn't have a preference due to motion sensitivities
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+.back-to-top-wrapper {
+	top: $scrollLength;
+	right: 1.25rem;
+	width: 2.250rem;
+	z-index: 999;
+	pointer-events: none;
+}
+
+.back-to-top-link {
+	height: 2.250rem;
+	width: 2.250rem;
+	top: calc(100vh - 5rem);
+	transition: transform 80ms ease-in;
+	opacity: .6;
+	pointer-events: all;
+
+	&:hover {
+		opacity: .2;
+	}
+}

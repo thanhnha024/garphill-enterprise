@@ -1,0 +1,31 @@
+// Button
+
+.btn:not([class*="btn-"]):not(.single_add_to_cart_button):not(.wc-forward):not(.navbar-toggler):not(.add_to_cart_button):not(.product_type_simple):not(.owl-dot):not(.owl-next):not(.owl-prev):not([name="apply_coupon"]):not(.wpforms-submit):not(.navbar-toggle-close),
+button:not([class*="btn-"]):not(.single_add_to_cart_button):not(.wc-forward):not(.navbar-toggler):not(.add_to_cart_button):not(.product_type_simple):not(.owl-dot):not(.owl-next):not(.owl-prev):not([name="apply_coupon"]):not(.wpforms-submit):not(.navbar-toggle-close),
+.button:not(.single_add_to_cart_button):not(.wc-forward):not(.navbar-toggler):not(.add_to_cart_button):not(.product_type_simple):not(.owl-dot):not(.owl-next):not(.owl-prev):not([name="apply_coupon"]):not(.wpforms-submit):not(.navbar-toggle-close),
+.hero-action-btn,
+.woocommerce-mini-cart__buttons .button,
+input[type=button]:not(.ninja-forms-field),
+input[type=reset],
+input[type=submit] {
+    background-color: #efecec;
+    border-color: #efecec;
+    color: $body-color;
+
+    &:hover,&:focus {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+button,
+.button,
+.hero-action-btn,
+input[type=button],
+input[type=reset],
+input[type=submit],
+a.dokan-btn,
+.dokan-btn,
+input[type='submit'].dokan-btn {
+    @extend .btn;
+}

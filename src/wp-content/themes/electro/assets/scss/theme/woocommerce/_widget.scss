@@ -1,0 +1,169 @@
+/**
+** WooCommerce Widget
+**/
+.product_list_widget {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+
+	> li {
+		@include clearfix();
+		margin-bottom: 1.35em;
+
+		> a {
+			&:hover, &:focus {
+				color: darken( $product-title-color, 50% );
+				text-decoration: none;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.product-title {
+		color: $product-title-color;
+		font-weight: bold;
+		font-size: 1em;
+		display: block;
+		line-height: 1.2em;
+	}
+
+	a {
+		color: $product-title-color;
+		font-weight: bold;
+	}
+
+	img,
+	.wp-post-image {
+		width: 75px;
+		height: 75px;
+		margin-right: 20px;
+		float: left;
+	}
+
+	.electro-price {
+		margin-top: 1.667em;
+		display: block;
+		margin-left: 95px;
+	}
+
+	.star-rating + .electro-price {
+		margin-top: 0;
+	}
+
+	.amount {
+		display: inline-block;
+		font-size: 1.071em;
+	}
+
+	del .amount, del {
+		color: #8f8f8f;
+	}
+
+	del .amount {
+		text-decoration: line-through;
+		font-size: 0.928em;
+	}
+
+	ins {
+		text-decoration: none;
+	}
+
+	ins .amount {
+		font-size: 1.071em;
+	}
+
+	.star-rating {
+		margin: 8px 0;
+
+		& + .amount,
+		& + del > .amount,
+		& + del + ins > .amount {
+			margin-top: 0;
+		}
+	}
+
+    &.cart_list {
+		margin-bottom: 1rem;
+	}
+
+	.mini_cart_item {
+
+		.remove {
+			float: right;
+			color: #ee0000;
+		}
+
+		a:nth-child(2) {
+			line-height: 1.286em;
+			font-size: 1em;
+		}
+
+		.quantity {
+			display: block;
+
+			.amount {
+				margin-top: 0;
+			}
+		}
+
+		.variation-Vendor {
+			display: none;
+		}
+	}
+}
+
+.electro_recent_posts_widget{
+	ul {
+		 > li {
+		 	margin-bottom: 1.429em;
+
+		 	.post-thumbnail {
+		 		float: left;
+		 		padding-right: 0.929em;
+
+		 		img {
+		 			width: 75px;
+		 			height: 75px;
+		 		}
+		 	}
+
+		 	.post-content {
+		 		@include clearfix();
+
+			 	> a {
+			 		display: block;
+
+			 		&:hover,
+			 		&:focus {
+			 			color: $black;
+			 		}
+			 	}
+
+			 	.post-date {
+			 		color: lighten($body-color, 20%);
+			 		font-size: 0.857em;
+			 		line-height: 1.000em;
+			 	}
+			 }
+
+		 	&:last-child {
+		 		margin-bottom: 0;
+		 	}
+		}
+	}
+
+	.electro-img-placeholder {
+		position: relative;
+
+		.fa {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+		}
+	}
+}

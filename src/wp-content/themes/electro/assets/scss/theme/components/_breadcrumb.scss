@@ -1,0 +1,40 @@
+.woocommerce-breadcrumb {
+    padding: 9px 15px;
+    margin: 0 -15px 1.6em;
+    background-color: lighten($border-color, 10%);
+    white-space: nowrap;
+    overflow: scroll;
+
+    @include media-breakpoint-up(md) {
+        background-color: transparent;
+        padding: 1.786em 0 1.6em;
+        overflow: visible;
+        margin: 0;
+    }
+
+    span.delimiter {
+        margin: 0 10px;
+
+        @include media-breakpoint-up(md) {
+            margin: 0 1.429em;
+        }
+
+        & + a {
+            padding: 0.465em 0.929em;
+            border-radius: 0.357em;
+            display: inline-block;
+
+            @include media-breakpoint-up(md) {
+                background-color: lighten($border-color, 8%);
+
+                &:hover,&:focus {
+                    background-color: lighten($border-color, 3%);
+                }
+            }
+        }
+    }
+}
+
+.rtl .woocommerce-breadcrumb span.delimiter i {
+    transform: rotate(180deg);
+}

@@ -1,0 +1,156 @@
+// Header v14
+.electro-dark {
+    .header-v14 {
+        .ec-icon-box {
+            .elementor-icon-box-title,
+            .elementor-icon,
+            .elementor-icon-box-description {
+                color: var(--bs-ec-dark-body) !important;
+            }
+
+            .elementor-icon * {
+                fill: var(--bs-ec-dark-body) !important;
+            }
+        }
+
+        .ec-cart {
+            .elementor-icon-box-title {
+                color: var(--bs-ec-dark-body) !important;
+            }
+        }
+
+        .ec-icon {
+            svg {
+                fill: var(--bs-ec-dark-body) !important;
+            }
+
+            .elementor-icon-wrapper {
+                display: flex;
+            }
+        }
+
+        .mas-elementor-nav-menu {
+            .sub-menu {
+                &,li {
+                    background-color: #212121 !important;
+                }
+    
+                li a:hover {
+                    background-color: var(--bs-ec-dark) !important;
+                }
+                
+                &,a {
+                    color: #d9d9d9 !important;
+                }
+            }
+        }
+    }   
+}
+
+.header-v14 {
+    .primary-nav {
+        .mas-elementor-nav-menu  {
+            >.menu-item {
+                > a {
+                    font-weight: 600;
+                }
+
+                > .dropdown-menu {
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+            }
+        }
+    }   
+}
+
+.cat-nav {
+    position: relative;
+    width: auto !important;
+    min-width: max-content !important;
+
+    > .e-con-inner {
+        margin: 0;
+    }
+
+    .elementor-widget {
+        position: static;
+    }
+
+    .mas-hamburger-menu .dropdown-menu {
+        position: absolute !important;
+    }
+
+    .handheld {
+        >.mas-elementor-nav-menu--dropdown {
+            background-color:#fff;
+        }
+
+        
+
+        .yamm-fw,
+        .yamm-hw,
+        .yamm-tfw {
+            > .dropdown-menu {
+                min-height: 400px;
+                padding-bottom: 0 !important;
+
+                > li {
+                    > .elementor {
+                        width: 100%;
+                    }
+                }
+
+                a {
+                    padding: 0 !important;
+                }
+            }
+
+            .bg-yamm {
+                bottom: 0;
+                top: auto;
+                z-index: -1;
+                margin: 0 -2.143em;
+            }
+
+            .yamm-content {
+                min-height: 400px;
+            }
+        }
+    }
+
+    .mas-elementor-menu-toggle {
+        padding: 0;
+        position: static;
+
+        .navbar-toggler-icon {
+            display: none;
+        }
+
+        .navbar-toggler {
+            padding: 7px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50px;
+            margin: 4px;
+
+            &::before {
+                position: absolute;
+                inset: 0;
+                content: "";
+            }
+        }
+
+        .handheld {
+            position: absolute;
+            top: 100%;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.28);
+            z-index:9;
+            margin-top:10px;
+
+            &.collapsing {
+                height: auto !important;
+            }
+        }
+    }
+}

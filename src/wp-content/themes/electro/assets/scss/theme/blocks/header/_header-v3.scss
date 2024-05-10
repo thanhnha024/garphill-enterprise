@@ -1,0 +1,18 @@
+.header-v3 {
+    .masthead {
+        padding: 2em 0;
+    }
+
+    &.stuck {
+        background-color: $white;
+        box-shadow: 0 0 6px 0 rgba(1,1,1,.3);
+
+        .masthead {
+            padding: .7em 0;
+        }
+
+        .masthead + .electro-navbar-primary {
+            display: none;
+        }
+    }
+}

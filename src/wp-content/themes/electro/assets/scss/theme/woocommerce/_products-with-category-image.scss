@@ -1,0 +1,207 @@
+.products-with-category-image {
+    @include media-breakpoint-up(xl) {
+        header,
+        header.show-nav {
+            margin-bottom: 0;
+
+            h1, .h1 {
+                &:after {
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+
+.categories-menu-list {
+    ul.nav {
+        overflow: auto;
+        border: none;
+        padding-bottom: 6px;
+        position: relative;
+        padding-top: 0;
+        flex-wrap: nowrap;
+    }
+
+    .nav-item {
+        margin: 0;
+        flex-shrink: 0;
+
+        & + .nav-item {
+            padding-left: 0;
+            margin-left: 1em;
+        }
+    }
+
+    .nav-link {
+        font-size: 1em;
+        padding: 0.571em 1em;
+
+        &:hover,&:focus {
+            font-weight: bold;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        ul.nav {
+            flex-direction: column;
+            padding-top: 0;
+            overflow: hidden;
+        }
+
+        .nav-item + .nav-item {
+            border-top: 1px solid $border-color;
+            margin-left: 0;
+        }
+
+        .nav-link {
+            padding: 0.571em 0 0.571em 1em;
+        }
+    }
+}
+
+.products-with-category-image-inner {
+    .products-block {
+        ul.products>li.product {
+            @include media-breakpoint-between(lg, xxl) {
+                @include make-col(4);
+
+                &:nth-child(even),
+                &:nth-child(5n) {
+                    @include add-after-border();
+                }
+
+                &:nth-child(3n) {
+                    @include remove-after-border();
+                }
+
+                &:nth-child(1n+7) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .image-block {
+            @include make-col(5.88);
+
+            > img {
+                padding-right: 10px;
+            }
+        }
+
+        .products-block {
+            @include make-col(6.12);
+            margin-top: 7px;
+            align-self: center;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .image-block {
+            @include make-auto-width-col();
+        }
+
+        .products-block {
+            @include make-auto-col();
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .categories-menu-list {
+            padding-right: 22px;
+            flex: 0 0 222px;
+            max-width: 222px;
+            margin-top: 2.286em;
+        }
+
+        .products-block {
+            .columns-4.products>.product .product-inner {
+                padding: 1.429em 1.014em 1em 1.014em;
+            }
+
+            .columns-4.products>.product .price {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    @media (min-width: 1800px) {
+        .products-block {
+            .columns-4.products>.product .product-inner {
+                padding: 1.429em 1.714em 1em 1.714em;
+            }
+
+            .columns-4.products>.product .price {
+                font-size: 1.429em;
+            }
+        }
+    }
+}
+
+.products-carousel-category-with-image-inner {
+    section.section-products-carousel {
+        margin-bottom: 3px;
+    }
+
+    @include media-breakpoint-up(md) {
+        .image-block {
+            @include make-col(3.38);
+            padding-right: 0;
+        }
+
+        .products-carousel-block {
+            @include make-col(8.62);
+            padding-left: 0;
+        }
+
+        .products-carousel {
+            padding-left: 6px;
+        }
+    }
+
+    &.description {
+        .owl-item>.product .product-loop-body {
+            display: block;
+
+            .product-sku,
+            .loop-product-categories,
+            .woocommerce-loop-product__title {
+                display: none;
+            }
+
+            .product-rating {
+                margin-bottom: 15px;
+            }
+
+            .product-short-description {
+                margin-bottom: 12px;
+                height: 3.5em;
+
+                > div > div {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    &:before {
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        background-color: #7d7d7d;
+                        display: inline-block;
+                        border-radius: 50%;
+                        margin-right: 8px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+        .owl-item>.product:after {
+            @include media-breakpoint-up(lg) {
+                height: 54%;
+            }
+        }
+    }
+}

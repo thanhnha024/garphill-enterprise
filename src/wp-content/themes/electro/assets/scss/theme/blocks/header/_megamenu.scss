@@ -1,0 +1,249 @@
+@mixin make-megamenu-title() {
+	font-weight: bold;
+	font-size: 1em;
+	padding: 5px 0;
+
+	a, > a {
+		padding: 0;
+		font-weight: bold;
+	}
+}
+
+.yamm {
+	// reset positions
+	.nav,
+	.collapse,
+	.dropup,
+	ul.navbar-nav > li.dropdown,
+	>.dropdown.yamm-fw,
+	>.dropdown.yamm-hw,
+	>.dropdown.yamm-tfw {
+		position: static;
+	}
+
+	// propagate menu position under container for fw navbars
+	.container {
+		position: relative;
+	}
+
+	// by default aligns menu to left
+	.dropdown-menu {
+		left: auto;
+	}
+
+	.no-yamm-content-padding {
+		.yamm-content {
+			padding: 0;
+		}
+	}
+
+	// Fullwidth menu
+	.dropdown.yamm-fw .dropdown-menu {
+		left: 0;
+		right: 0;
+		position: absolute;
+		padding: 0;
+		animation-duration:200ms;
+
+		.menu-item {
+			list-style: none;
+		}
+
+		.menu {
+			padding: 0;
+		}
+	}
+
+	.yamm-content {
+		padding: 2.143em;
+
+		> p {margin-bottom: 0;}
+
+		@include media-breakpoint-up(lg) {
+	        padding: 0 2.143em;
+
+	        ul {
+	            @include list-unstyled();
+	        }
+
+	        li {
+	            > a {
+	                padding: 5px 0;
+	                display: block;
+	                border: none;
+
+	                &:hover,&:focus {
+	                    color: $black;
+	                    font-weight: 400;
+	                    background-color: transparent;
+	                    text-decoration: underline;
+	                }
+	            }
+	        }
+
+	        .nav-title>a,
+	        .nav-title>a:hover {
+	            font-weight: bold !important;
+	        }
+	    }
+
+		.wpb_content_element {
+			margin: 0;
+		}
+
+		.bg-yamm-content {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6, .nav-title {
+		@include make-megamenu-title();
+
+		a {
+			padding: 0 !important;
+		}
+	}
+
+	.nav-divider {
+		height: 1px;
+		border-top: 1px solid $border-color;
+		margin: 0.5em 0;
+	}
+
+	.nav-text, .nav-subtext {
+		display: block;
+	}
+
+	.nav-subtext {
+		font-size: 0.8em;
+		color: #aaa;
+		line-height: 1;
+	}
+}
+
+.bg-yamm-extend-outside {
+	position: relative;
+
+	@include media-breakpoint-up(md) {
+		right: -50px;
+	}
+}
+
+.yamm-tfw {
+    .dropdown-menu {
+        @include media-breakpoint-up(md) {
+            width: calc( 0.6 * ( 720px - 300px ) );
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: calc( 0.6 * ( 940px - 300px ) );
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: calc( 0.6 * ( 1200px - 300px ) );
+        }
+    }
+}
+
+.yamm-hw {
+    .dropdown-menu {
+        @include media-breakpoint-up(md) {
+            width: calc( 0.5 * ( 720px - 300px ) );
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: calc( 0.5 * ( 940px - 300px ) );
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: calc( 0.5 * ( 1200px - 300px ) );
+        }
+    }
+}
+
+.yamm-fw {
+    .dropdown-menu {
+        @include media-breakpoint-up(md) {
+            width: calc( ( 720px - 300px ) );
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: calc( ( 940px - 300px ) );
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: calc( ( 1200px - 300px ) );
+        }
+    }
+}
+
+.image-vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.animate-dropdown{
+	&.open > .dropdown-menu,
+    .open > .dropdown-menu,
+    .open > .dropdown-menu > .dropdown-submenu > .dropdown-menu {
+        animation-name: slidenavAnimation;
+        animation-duration: 200ms;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+.electro-animate-dropdown .dropdown.open  {
+    a[data-bs-toggle=dropdown] + .dropdown-menu,
+    a[data-bs-toggle=dropdown] + .dropdown-menu .dropdown-menu,
+    a[data-hover=dropdown] + .dropdown-menu .dropdown-menu {
+        animation-name: slidenavAnimation;
+        animation-duration: 200ms;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+.electro-animate-dropdown .dropdown.open  {
+    a[data-hover=dropdown] + .dropdown-menu {
+        top: 60%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.electro-animate-dropdown.animated-dropdown .dropdown.open  {
+    a[data-hover=dropdown] + .dropdown-menu {
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 0;
+    }
+}
+
+.electro-animate-dropdown.animated-dropdown .dropdown  {
+    a[data-hover=dropdown] + .dropdown-menu {
+        transition: all 200ms;
+    }
+}
+
+.electro-animate-dropdown:not(.animated-dropdown) .dropdown.open  {
+    a[data-hover=dropdown]:before {
+        display: none;
+    }
+}
+
+@keyframes slidenavAnimation {
+    from {
+        margin-top: -30px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}

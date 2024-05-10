@@ -1,0 +1,263 @@
+table.cart {
+	thead {
+		th {
+			font-size: 1em;
+			line-height: 1.714em;
+			color: #747474;
+			border-bottom: 1px solid $border-color !important;
+			border-top: none;
+			font-weight: normal;
+		}
+	}
+
+	td {
+		vertical-align: middle;
+		font-size: 1.214em;
+		line-height: 1.147em;
+	}
+
+	tbody {
+		tr.cart_item {
+			&:first-child {
+				td {
+					padding-top: 2.059em;
+				}
+			}
+
+			td {
+				border-top: none;
+				padding-top: 1.029em;
+				padding-bottom: 1.029em;
+			}
+		}
+	}
+
+	.product-remove {
+		a {
+			color: #a7a7a7;
+			font-size: 1.5em;
+
+			&:hover,&:focus {
+				color: $danger;
+			}
+		}
+	}
+
+	.product-thumbnail {
+		width: 136px;
+
+		a {
+			display: block;
+		}
+
+		img {
+			max-width: 100px;
+			margin: auto;
+			height: 92px;
+			width: auto;
+			border: 1px solid $border-color;
+			padding: 4px;
+		}
+	}
+
+	.product-name {
+		a {
+			&:hover,&:focus {
+				color: $black;
+			}
+		}
+	}
+
+	.product-quantity {
+		.quantity {
+			width: 5em;
+
+			&.buttons_added {
+				width: 8em;
+				font-size: 0.824em;
+
+				.minus, .plus {
+					bottom: 0.5em;
+				}
+			}
+		}
+
+		.input-text {
+			padding: 0.5em 1em;
+			border-radius: 1em;
+		}
+	}
+
+	.actions {
+		text-align: right;
+		font-size: 1em;
+		padding-top: 3em;
+		border-bottom-width: 0;
+
+		@include media-breakpoint-up(md) {
+			padding-top: 5.714em;
+		}
+
+		.wc-proceed-to-checkout {
+			display: inline-block;
+			margin-left: 0.5em;
+
+			.checkout-button {
+				font-weight: bold;
+				font-size: .875rem;
+				border-radius: 1.571em;
+				padding: 1.036em 2.134em;
+				line-height: 1.18em;
+
+				&::after {
+					content: none;
+				}
+			}
+		}
+	}
+
+	.coupon {
+		font-size: 1em;
+		float: left;
+		text-align: left;
+		display: flex;
+
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
+
+		@include media-breakpoint-up(md) {
+			@include make-col(5);
+		}
+
+		label[for="coupon_code"] {
+			display: none;
+		}
+
+		.input-text {
+			border: 1px solid $border-color;
+			border-right: 0;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			padding: 0.534em 1.8em;
+
+			@include media-breakpoint-down(sm) {
+				border-top-right-radius: 1.467em;
+    			border-bottom-right-radius: 1.467em;
+				border-right: 0;
+				margin-bottom: 16px;
+			}
+		}
+
+		.button {
+			border-radius: 1.571em;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			margin-left: -4px;
+			position: relative;
+			white-space: pre;
+			font-weight: 700;
+			font-size: .875rem;
+			padding: 1.036em 2.134em;
+			background-color: $body-color;
+			color: $white;
+			line-height: 1.18em;
+
+			&:hover,&:focus {
+				background-color: $black;
+			}
+
+			@include media-breakpoint-down(sm) {
+				border-top-left-radius: 1.467em;
+	    		border-bottom-left-radius: 1.467em;
+			}
+		}
+	}
+
+	button[name="update_cart"] {
+		font-size: .875rem;
+		border-radius: 1.571em;
+		padding: 1.036em 2.134em;
+		line-height: 1.3em;
+		border-width: 0;
+		display: inline-block;
+		color: $body-color;
+		background-color: #efecec;
+		width: auto;
+	}
+}
+
+table.cart input[name=update_cart].disabled.focus,
+table.cart input[name=update_cart].disabled:focus,
+table.cart input[name=update_cart].disabled:hover,
+table.cart input[name=update_cart]:disabled.focus,
+table.cart input[name=update_cart]:disabled:focus,
+table.cart input[name=update_cart]:disabled:hover {
+	color: $body-color;
+}
+
+#shipping_method {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	li {
+		position: relative;
+
+		label {
+			font-weight: normal;
+			margin-left: 5px;
+
+			> span {
+				position: absolute;
+				right: 0;
+				top: 2px;
+			}
+		}
+	}
+}
+
+tr.shipping {
+	flex-wrap: wrap;
+
+	> td, > th {
+		display: block;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	> td > .woocommerce-Price-amount {
+		float: right;
+	}
+
+	> th {
+		padding-bottom: 0 !important;
+	}
+}
+
+.woocommerce-checkout-review-order-table {
+	display: block;
+	padding: 0 0.75rem;
+
+	thead, tbody, tfoot {
+		display: block;
+		width: 100%;
+
+		> tr {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			border-top: 1px solid $border-color;
+
+			td, th {
+				border: 0;
+				padding: 0.75rem 0;
+			}
+		}
+	}
+
+	thead tr {
+		border-top: 0;
+	}
+}

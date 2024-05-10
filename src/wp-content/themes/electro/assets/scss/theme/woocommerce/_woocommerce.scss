@@ -1,0 +1,158 @@
+/**
+** WooCommerce
+**/
+
+.woocommerce-page,
+.dokan-store {
+
+	.page-header {
+		position: relative;
+		margin-bottom: 1.429em;
+
+		.woocommerce-result-count {
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				margin: 0;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	.page-title {
+		font-size: 1.786em;
+		line-height: 1.6em;
+		margin: 0;
+	}
+}
+
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
+p.no-comments {
+	padding: 1em 1.618em;
+	@include clearfix;
+	margin-bottom: 2.618em;
+	background-color: $success;
+	margin-left: 0;
+	border-radius: 2px;
+	color: $white;
+	clear: both;
+	border-left: .618em solid rgba(0,0,0,0.15);
+
+	a {
+		color: $white;
+
+		&:hover {
+			color: $white;
+			opacity: 0.7;
+		}
+
+		&.button:hover {
+			opacity: 1;
+		}
+	}
+
+	.button {
+		float: right;
+		padding: 0;
+		background: none;
+		color: $white;
+		box-shadow: none;
+		line-height: 1.618;
+		padding-left: 1em;
+		border-width: 0;
+		border-left-width: 1px;
+		border-left-style: solid;
+		border-left-color: rgba(255,255,255,0.25) !important;
+		border-radius: 0;
+
+		&:hover {
+			background: none;
+			color: $white;
+			opacity: 0.7;
+		}
+	}
+
+	pre {
+		background-color: rgba(0,0,0,.1);
+	}
+}
+
+.site-content {
+	> .container {
+		> .woocommerce {
+			> .woocommerce-message,
+			> .woocommerce-info,
+			> .woocommerce-error {
+				&:first-child {
+					margin-top: 2.618em;
+				}
+			}
+		}
+	}
+}
+
+.wc-forward {
+	&:after {
+		content: "\f30b";
+		margin-left: .53em;
+		@include fa-icon();
+		@include fa-fas;
+	}
+}
+
+.woocommerce-error {
+	list-style: none;
+}
+
+.woocommerce-info,
+.woocommerce-noreviews,
+p.no-comments {
+	color: $body-color;
+
+	a, button {
+		color: $body-color;
+		font-weight: bold;
+
+		&:hover {
+			color: $body-color;
+			opacity: 1;
+		}
+	}
+}
+
+.woocommerce-error {
+	background-color: $danger;
+}
+
+dl.variation {
+	font-size: .857em;
+	margin: 0.857em 0 0 0;
+
+	dd {
+		margin: 0 0 1em;
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+
+p.in-stock,
+.in-stock span {
+	color: $success;
+}
+
+p.out-of-stock,
+.out-of-stock span {
+	color: $danger;
+}
+
+p.available-on-backorder,
+.available-on-backorder span {
+	color: $warning;
+}

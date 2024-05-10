@@ -1,0 +1,129 @@
+.home-v13-hero {
+    @include media-breakpoint-up(xl) {
+        .products>.product:hover .product-inner {
+            position: relative;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .products>.product:hover .hover-area {
+            display: none;
+        }
+    }
+
+    .woocommerce-loop-product__title {
+        color: #d9d9d9;
+    }
+
+    .owl-item>.product .loop-product-categories a,
+    .products>.product .loop-product-categories a {
+        color: #6e767d;
+    }
+
+    .product:not(:hover) .add-to-cart-wrap .button::before,
+    .product:not(:hover) .added_to_cart::before {
+        background-color: #495057;
+    }
+
+    .product:not(.owl-loaded):focus>.product-outer .add-to-cart-wrap .button::before,
+    .product:not(.owl-loaded):focus>.product-outer .added_to_cart::before,
+    .product:not(.owl-loaded):hover>.product-outer .add-to-cart-wrap .button::before,
+    .product:not(.owl-loaded):hover>.product-outer .added_to_cart::before {
+        color: #181818;
+    }
+
+    .owl-item>.product::after,
+    .products>li.product::after {
+        border-color: #2f3336;
+        content: '' !important;
+        height: 66.666667%;
+    }
+
+    .products>li.product:last-child::after {
+        display: none;
+    }
+
+    .owl-item>.product .price,
+    .products>.product .price {
+        color: #34bcec;
+    }
+}
+
+.home-v13-hero-search {
+    .woocommerce-product-search {
+        display: flex;
+
+        .search-field {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            background-color: #4c4c4c;
+            border: 0;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            padding-left: 26px;
+            color: #dfdfdf;
+
+            &::placeholder {
+                color: #dfdfdf;
+            }
+        }
+
+        button {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            font-size: 0;
+            border-width: 0;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            padding: 12.4px 19px;
+
+            &:hover {
+                background-color: #000 !important;
+            }
+
+            &::after {
+                content: "\6d";
+                display: inline-block;
+                font: normal normal normal 14px/1 font-electro;
+                font-size: inherit;
+                text-rendering: auto;
+                vertical-align: middle;
+                font-size: 1.5rem;
+                line-height: 1.26;
+            }
+        }
+    }
+}
+
+.home-v13-vertical-menu {
+    .home-vertical-nav.departments-menu-v2 .vertical-menu-title {
+        background-color: transparent;
+        padding-top: 8px;
+    }
+
+    .vertical-menu-title {
+        .title {
+            border-bottom: 1px solid #ddd;
+            line-height: 1.6em;
+            display: inline-block;
+            padding-bottom: 0.4em;
+            position: relative;
+            margin-bottom: 0;
+            font-size: 18px;
+            width: 100%;
+
+            &::after {
+                content: ' ';
+                border-bottom: 2px solid transparent;
+                display: block;
+                position: absolute;
+                bottom: -1px;
+                width: 70px;
+            }
+        }
+
+        & + .dropdown-menu {
+            position: relative;
+        }
+    }
+}

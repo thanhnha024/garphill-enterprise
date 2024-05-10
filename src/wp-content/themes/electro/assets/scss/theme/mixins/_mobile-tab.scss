@@ -1,0 +1,68 @@
+@mixin mobile-tab {
+    display: flex;
+    overflow: auto;
+    border: none;
+    padding-bottom: 6px;
+    position: relative;
+
+    &::after {
+        content: ' ';
+        border-bottom: 1px solid $border-color;
+        display: block;
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+    }
+
+    li {
+        margin: 0;
+        flex-shrink: 0;
+
+        .nav-link.active::after {
+            z-index: 1;
+        }
+
+        & + li {
+            padding-left: 40px;
+        }
+    }
+}
+
+@mixin mobile-tab-with-title {
+    display: flex;
+    flex-direction: column;
+
+    h2.h1 {
+        margin-bottom: 30px !important;
+    }
+
+    .nav {
+        display: flex;
+        overflow: auto;
+        border: none;
+        padding-bottom: 6px;
+        position: relative;
+
+        &::after {
+            content: ' ';
+            border-bottom: 1px solid $border-color;
+            display: block;
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+        }
+
+        li {
+            margin: 0 !important;
+            flex-shrink: 0;
+
+            .nav-link.active::after {
+                z-index: 1;
+            }
+
+            & + li {
+                padding-left: 40px;
+            }
+        }
+    }
+}
