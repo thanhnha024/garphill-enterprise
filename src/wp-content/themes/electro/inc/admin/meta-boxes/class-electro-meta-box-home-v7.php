@@ -99,6 +99,7 @@ class Electro_Meta_Box_Home_v7 {
                     ?><li class="<?php echo esc_attr( $key ); ?>_options <?php echo esc_attr( $key ); ?>_tab <?php echo implode( ' ' , $tab['class'] ); ?>">
                         <a href="#<?php echo esc_attr( $tab['target'] ); ?>"><?php echo esc_html( $tab['label'] ); ?></a>
                     </li><?php
+
                 }
                 do_action( 'electro_home_write_panel_tabs' );
             ?>
@@ -1000,12 +1001,12 @@ class Electro_Meta_Box_Home_v7 {
                         'name'          => '_home_v7[trp][section_title]',
                         'value'         => isset( $home_v7['trp']['section_title'] ) ? $home_v7['trp']['section_title'] : esc_html__( 'Recommendation For You', 'electro' ),
                     ) );
-
+                    
                     electro_wp_text_input( array(
-                        'id'            => '_home_v7_trp_button_text',
-                        'label'         => esc_html__( 'Action Text', 'electro' ),
-                        'name'          => '_home_v7[trp][button_text]',
-                        'value'         => isset( $home_v7['trp']['button_text'] ) ? $home_v7['trp']['button_text'] : esc_html__( 'View All Recommendations', 'electro' ),
+                        'id'            => '_home_v7_trp_button_text_test',
+                        'label'         => esc_html__( 'Action Text_test', 'electro' ),
+                        'name'          => '_home_v7[trp][button_text_test]',
+                        'value'         => isset( $home_v7['trp']['button_text_test'] ) ? $home_v7['trp']['button_text_test'] : esc_html__( 'View All Recommendations', 'electro' ),
                     ) );
 
                     electro_wp_text_input( array(
